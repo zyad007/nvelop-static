@@ -1,6 +1,8 @@
 import React from 'react'
 import { Be_Vietnam_Pro } from 'next/font/google'
 import NavBar from '@/components/NavBar'
+import Footer from '@/components/Footer'
+import AboutUs from '@/components/AboutUs'
 
 const beVietnamPro600 = Be_Vietnam_Pro({
     weight: '600',
@@ -15,7 +17,7 @@ const beVietnamPro300 = Be_Vietnam_Pro({
 export default async function Product() {
 
     return (
-        <div className={beVietnamPro600.className + ' px-5 md:px-10 pt-5'}>
+        <div className={beVietnamPro600.className + ' relative px-5 md:px-10 pt-5 pb-20'}>
 
             <NavBar />
 
@@ -53,7 +55,7 @@ export default async function Product() {
                     />
 
                     <FeatureCard
-                        title='Find the right-fit vendors   '
+                        title='Find the right-fit vendors'
                         content="Invite your existing vendors or choose potential new vendors proposed by Nvelop. Ensure your supplier data stays current 
                         by integrating with your ERP and Supplier Relationship Management systems. Enrich vendor data with internal and external inputs."
                         subtitle='DISCOVER VENDORS'
@@ -111,6 +113,8 @@ export default async function Product() {
                     </div>
 
                 </div>
+                <AboutUs />
+                <Footer />
 
             </div>
         </div>
