@@ -1,4 +1,4 @@
-"use-client"
+
 import { Be_Vietnam_Pro } from 'next/font/google'
 import React from 'react'
 const beVietnamPro300 = Be_Vietnam_Pro({

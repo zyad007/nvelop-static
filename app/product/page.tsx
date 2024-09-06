@@ -22,11 +22,11 @@ const beVietnamPro300 = Be_Vietnam_Pro({
 export default async function Product() {
 
     return (
-        <div className={beVietnamPro600.className + ' relative px-5 md:px-10 pt-5 pb-20'}>
+        <div className={beVietnamPro600.className + ' relative  pt-5 pb-20'}>
 
             <NavBar />
 
-            <div className='w-full h-full flex flex-col md:flex-col lg:flex-row justify-center items-center md:px-20 mt-5 mb-5 animated animatedFadeInUp fadeInUp'>
+            <div className='w-full h-full flex flex-col md:flex-col lg:flex-row justify-center items-center md:px-20 mt-5 mb-5 animated animatedFadeInUp fadeInUp px-5 md:px-10'>
 
                 <div className='flex flex-col items-start justify-center md:justify-start md:pl-20 lg:pl-32'>
                     <h1 className='text-5xl md:text-5xl lg:text-7xl pl-12 md:px-0'>AI-powered</h1>
@@ -40,7 +40,7 @@ export default async function Product() {
 
             </div>
 
-            <div className='w-full flex flex-col items-center justify-center' id='how-it-works-content '>
+            <div className='w-full flex flex-col items-center justify-center' id='how-it-works-content px-5 md:px-10 '>
                 <div className='w-full border-b border-[#0656FE] text-[#0656FE] text-center text-3xl md:text-5xl mb-5 animated animatedFadeInUp fadeInUpDelay300'>
                     <h2 className='pb-5'>Key features</h2>
                     <div className='w-full flex justify-center items-center mb-5'>
@@ -162,14 +162,11 @@ export default async function Product() {
                     </div>
 
                 </div>
-                <AboutUs />
-                <Footer />
 
             </div>
 
-            {
-                
-            }
+            <AboutUs />
+            <Footer />
         </div>
     )
 
@@ -209,7 +206,7 @@ async function FunctionCard({
     return (
         <div className='flex flex-col md:flex-row justify-center items-center w-full md:w-[40rem] '>
             <img className='w-[50%] md:w-[15rem]' src={imagePath} />
-            
+
             <div className='flex flex-col justify-center items-start px-5 w-full'>
                 <h3 className='text-lg md:text-xl  text-[#0656FE] px-4'>{title}</h3>
                 <p className={beVietnamPro400.className + '  text-sm md:text-lg px-4 md:px-0 md:mt-3'}>
