@@ -21,10 +21,10 @@ export default async function Product() {
 
             <div className='w-full h-full flex flex-col md:flex-col lg:flex-row justify-center items-center md:px-20 mt-5 mb-5'>
 
-                <div className='flex flex-col items-center lg:items-start justify-center md:pl-20 lg:pl-32'>
-                    <h1 className='text-5xl md:text-5xl lg:text-7xl'>AI-powered</h1>
-                    <h1 className='text-5xl md:text-5xl lg:text-7xl text-[#f7922f] mb-5 md:mb-10'>IT sourcing</h1>
-                    <p className={beVietnamPro300.className + ' text-lg md:text-xl text-[#302c42] text-opacity-75 px-12'}>Run accelerated, more impactful IT sourcing with automated, AI-driven SaaS platform.</p>
+                <div className='flex flex-col items-start justify-center md:justify-start md:pl-20 lg:pl-32'>
+                    <h1 className='text-5xl md:text-5xl lg:text-7xl pl-12 md:px-0'>AI-powered</h1>
+                    <h1 className='text-5xl md:text-5xl lg:text-7xl pl-12 md:px-0 text-[#f7922f] mb-5 md:mb-10'>IT sourcing</h1>
+                    <p className={beVietnamPro300.className + ' text-lg md:text-xl text-[#302c42] text-opacity-75 px-12 md:px-0'}>Run accelerated, more impactful IT sourcing with automated, AI-driven SaaS platform.</p>
                 </div>
 
                 <div className='w-full flex justify-center items-center'>
@@ -36,6 +36,9 @@ export default async function Product() {
             <div className='w-full flex flex-col items-center justify-center' id='how-it-works-content'>
                 <div className='w-full border-b border-[#0656FE] text-[#0656FE] text-center text-3xl md:text-5xl mb-5'>
                     <h2 className='pb-5'>Key features</h2>
+                    <div className='w-full flex justify-center items-center mb-5'>
+                        <img className='w-full md:w-[80%]' src='./frames/frame.png' />
+                    </div>
                 </div>
 
 
@@ -96,6 +99,19 @@ export default async function Product() {
                     />
                 </div>
 
+                <div>
+
+                    <div className='flex w-full'>
+                        <div className=''>
+                            <h3>Effortless sourcing</h3>
+
+                            <p>Effortlessly execute sourcing events. Quickly set up both simple and strategic sourcing events, inviting suppliers to 
+                            submit their information, proposals, or quotations.</p>
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
         </div>
     )
@@ -114,9 +130,9 @@ async function FeatureCard({
     return (
         <div className='flex border flex-col-reverse md:odd:flex-row md:even:flex-row-reverse justify-between items-center w-full md:w-5/6 bg-[#F9F7FF] rounded-3xl md:rounded-xl p-5 md:p-10 mb-5 '>
             <div className='w-full md:w-[50%]'>
-                <h4 className='text-xl text-[#0656FE]'>{subtitle}</h4>
-                <h3 className='text-3xl md:text-3xl lg:text-4xl text-[#f7922f] mb-5 md:mb-10'>{title}</h3>
-                <p className={beVietnamPro300.className + ' text-lg md:text-xl text-[#302c42] text-opacity-75'}>{content}</p>
+                <h4 className='text-sm md:text-xl text-center md:text-start  text-[#0656FE]'>{subtitle}</h4>
+                <h3 className='text-2xl md:text-3xl lg:text-4xl text-center md:text-start text-[#f7922f] mb-5 md:mb-10'>{title}</h3>
+                <p className={beVietnamPro300.className + ' text-center md:text-start text md:text-xl text-[#302c42] text-opacity-75'}>{content}</p>
             </div>
 
             <div className='w-full md:w-[80%] flex justify-center items-center mb-3 md:mb-0'>
