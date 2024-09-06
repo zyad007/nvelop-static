@@ -7,7 +7,7 @@ const beVietnamPro300 = Be_Vietnam_Pro({
 })
 export default function AboutUs() {
     return (
-        <div className='w-full text-black flex flex-col justify-center items-center text-xs md:text-base md:my-10 bg-[#f9f7ff] p-6 rounded-md border'>
+        <div className='w-full text-black flex flex-col justify-center items-center text-xs md:text-base md:mt-10 bg-[#f9f7ff] p-6 rounded-md border'>
             <div className='w-full text-center md:text-5xl text-4xl text-[#0656FE] mb-5'>
                 About Us
             </div>
