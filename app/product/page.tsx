@@ -7,6 +7,11 @@ const beVietnamPro600 = Be_Vietnam_Pro({
     subsets: ['latin']
 })
 
+const beVietnamPro400 = Be_Vietnam_Pro({
+    weight: '400',
+    subsets: ['latin']
+})
+
 const beVietnamPro300 = Be_Vietnam_Pro({
     weight: '300',
     subsets: ['latin']
@@ -19,7 +24,7 @@ export default async function Product() {
 
             <NavBar />
 
-            <div className='w-full h-full flex flex-col md:flex-col lg:flex-row justify-center items-center md:px-20 mt-5 mb-5'>
+            <div className='w-full h-full flex flex-col md:flex-col lg:flex-row justify-center items-center md:px-20 mt-5 mb-5 animated animatedFadeInUp fadeInUp'>
 
                 <div className='flex flex-col items-start justify-center md:justify-start md:pl-20 lg:pl-32'>
                     <h1 className='text-5xl md:text-5xl lg:text-7xl pl-12 md:px-0'>AI-powered</h1>
@@ -28,16 +33,16 @@ export default async function Product() {
                 </div>
 
                 <div className='w-full flex justify-center items-center'>
-                    <img className='w-full md:w-[70%]' src='./flat/product-main.svg' />
+                    <img className='w-full md:w-[50rem]' src='./flat/product-main.svg' />
                 </div>
 
             </div>
 
-            <div className='w-full flex flex-col items-center justify-center' id='how-it-works-content'>
-                <div className='w-full border-b border-[#0656FE] text-[#0656FE] text-center text-3xl md:text-5xl mb-5'>
+            <div className='w-full flex flex-col items-center justify-center' id='how-it-works-content '>
+                <div className='w-full border-b border-[#0656FE] text-[#0656FE] text-center text-3xl md:text-5xl mb-5 animated animatedFadeInUp fadeInUpDelay300'>
                     <h2 className='pb-5'>Key features</h2>
                     <div className='w-full flex justify-center items-center mb-5'>
-                        <img className='w-full md:w-[80%]' src='./frames/frame.png' />
+                        <img className='w-full md:w-[100rem]' src='./frames/frame.png' />
                     </div>
                 </div>
 
@@ -99,20 +104,68 @@ export default async function Product() {
                     />
                 </div>
 
-                <div>
+                <div className='w-full flex flex-col justify-center items-center border-b border-[#0656FE] mb-10'>
 
-                    <div className='flex w-full'>
-                        <div className=''>
-                            <h3>Effortless sourcing</h3>
+                    <div className='flex flex-col md:space-x-8 md:flex-row justify-center items-center w-full my-5'>
 
-                            <p>Effortlessly execute sourcing events. Quickly set up both simple and strategic sourcing events, inviting suppliers to 
-                            submit their information, proposals, or quotations.</p>
-                        </div>
+                        <FunctionCard
+                            title='Effortless sourcing'
+                            content='Effortlessly execute sourcing events. Quickly set up both simple and
+                                    strategic sourcing events, inviting suppliers to
+                                    submit their information, proposals, or quotations.'
+                            imagePath='./flat/sfmikko-icon-08.svg'
+                        />
+
+                        <FunctionCard
+                            title='Dynamic Vendor Evaluation'
+                            content='Perform comprehensive supplier evaluations. Manage objective and subjective scoring sheets 
+                            on vendor performance during the bid. Adjust weights based on your own evaluation criteria.'
+                            imagePath='./flat/sfmikko-icon-01.svg'
+                        />
+
+                    </div>
+
+                    <div className='flex flex-col md:space-x-8 md:flex-row justify-center items-center w-full my-5'>
+
+                        <FunctionCard
+                            title='Automated RFP content'
+                            content='Generate RFP questions and content specific to your sourcing category and type of sourcing. '
+                            imagePath='./flat/sfmikko-icon-02.svg'
+                        />
+
+                        <FunctionCard
+                            title=' Best Practices'
+                            content='Leverage several in-built best practices in Requirements engineering, Pricing, Contracting, and Vendor evaluation.'
+                            imagePath='./flat/sfmikko-icon-07.svg'
+                        />
+
+                    </div>
+
+
+                    <div className='flex flex-col md:space-x-8 md:flex-row justify-center items-center w-full my-5'>
+
+                        <FunctionCard
+                            title='Cost Savings
+'
+                            content='Generate RFP questions and content specific to your sourcing category and type of sourcing. '
+                            imagePath='./flat/asset10.png'
+                        />
+
+                        <FunctionCard
+                            title=' Fit-for-purpose sourcing process'
+                            content="Run a sourcing process that brings you the results you want, whether you're seeking new groundbreaking innovations or look for a solution to match your well-defined requirements."
+                            imagePath='./flat/sfmikko-icon-04.svg'
+                        />
+
                     </div>
 
                 </div>
 
             </div>
+
+            {
+                
+            }
         </div>
     )
 
@@ -137,6 +190,27 @@ async function FeatureCard({
 
             <div className='w-full md:w-[80%] flex justify-center items-center mb-3 md:mb-0'>
                 <img src={imagePath} />
+            </div>
+        </div>
+    )
+}
+
+async function FunctionCard({
+    title, content, imagePath
+}: {
+    title: string,
+    content: string,
+    imagePath: string
+}) {
+    return (
+        <div className='flex flex-col md:flex-row justify-center items-center w-full md:w-[40rem] '>
+            <img className='w-[50%] md:w-[15rem]' src={imagePath} />
+            
+            <div className='flex flex-col justify-center items-start px-5 w-full'>
+                <h3 className='text-lg md:text-xl  text-[#0656FE] px-4'>{title}</h3>
+                <p className={beVietnamPro400.className + '  text-sm md:text-lg px-4 md:px-0 md:mt-3'}>
+                    {content}
+                </p>
             </div>
         </div>
     )
