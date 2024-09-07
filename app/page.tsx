@@ -42,6 +42,7 @@ export default function Home() {
             <h1 className='text-5xl md:text-5xl lg:text-7xl pl-12 md:px-0'>AI-powered</h1>
             <h1 className='text-5xl md:text-5xl lg:text-7xl pl-12 md:px-0 text-[#f7922f] mb-5 md:mb-10'>IT sourcing</h1>
             <p className={beVietnamPro300.className + ' text-lg md:text-xl text-[#302c42] text-opacity-75 px-12 md:px-0'}>Run accelerated, more impactful IT sourcing with automated, AI-driven SaaS platform.</p>
+            <button className="buttonMain mt-8 h-12">Click to know more</button>
           </div>
 
           <div className='w-full flex justify-center items-center mb-20'>

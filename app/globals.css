@@ -2,7 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-
+@layer components {
+    .buttonMain {
+        @apply px-4 py-2 rounded border border-[#0656FE] bg-white text-[#0656FE] text-sm hover:shadow-[4px_4px_0px_0px_rgba(6,86,254)] transition duration-200
+    }
+  }
 
 @keyframes fadeInUp {
     from {
