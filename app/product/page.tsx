@@ -24,7 +24,6 @@ export default async function Product() {
     return (
         <div className='w-full h-full'>
             <div className={beVietnamPro600.className + ' relative pt-5 px-5 md:px-10'}>
-                <NavBar />
 
                 <div className='w-full h-full flex flex-col md:flex-col lg:flex-row justify-center items-center md:px-20 mt-5 mb-5 animated animatedFadeInUp fadeInUp px-5'>
 

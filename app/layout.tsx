@@ -3,17 +3,13 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Cookies from "@/components/Cookies";
 import ChatBot from "@/components/ChatBot";
+import NavBar from "@/components/NavBar";
+import { Be_Vietnam_Pro } from "next/font/google";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+const beVietnamPro600 = Be_Vietnam_Pro({
+  weight: '600',
+  subsets: ['latin']
+})
 
 export const metadata: Metadata = {
   title: "Nvelop",
@@ -29,10 +25,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`antialiased`}
       >
         <ChatBot />
         <Cookies />
+        <div className={beVietnamPro600.className + ' relative pt-5 px-5 md:px-10 flex flex-col justify-center items-center'}>
+          <NavBar />
+        </div>
         {children}
       </body>
     </html>
