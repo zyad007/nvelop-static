@@ -170,7 +170,7 @@ export default async function Product() {
                     <div className='w-full md:w-[35rem] flex flex-col justify-start mb-10'>
                         <h3 className='text-2xl md:text-4xl text-[#0656FE] mb-10'>Interested in a Demo?</h3>
                         <img className='w-[25rem] mb-6' src='./flat/Screen2.png' />
-                        <p className={beVietnamPro300.className + ' text-[#302c42]'}>We look forward to telling you more about our AI-native SaaS platform and discussing your plans for future-proofing your IT sourcing. </p>
+                        <p className={beVietnamPro300.className + ' text-[#302c42] text-opacity-75'}>We look forward to telling you more about our AI-native SaaS platform and discussing your plans for future-proofing your IT sourcing. </p>
                     </div>
 
                     <div className={beVietnamPro300.className + ' w-full md:w-[35rem] text-xl'}>

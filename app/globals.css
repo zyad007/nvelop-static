@@ -6,11 +6,11 @@
 
 @keyframes fadeInUp {
     from {
-        transform: translate3d(0,40px,0)
+        transform: translate3d(0, 40px, 0)
     }
 
     to {
-        transform: translate3d(0,0,0);
+        transform: translate3d(0, 0, 0);
         opacity: 1
     }
 }
@@ -18,11 +18,11 @@
 
 @-webkit-keyframes fadeInUp {
     from {
-        transform: translate3d(0,40px,0)
+        transform: translate3d(0, 40px, 0)
     }
 
     to {
-        transform: translate3d(0,0,0);
+        transform: translate3d(0, 0, 0);
         opacity: 1
     }
 }
@@ -53,15 +53,26 @@
     animation-delay: 1000ms;
 }
 
+.fadeInUpDelay600 {
+    opacity: 0;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+    animation-delay: 1500ms;
+}
+
 .ReactModal__Overlay {
     opacity: 0;
     transition: opacity 300ms ease-in-out;
-  }
-  
-  .ReactModal__Overlay--after-open{
+}
+
+.ReactModal__Overlay--after-open {
     opacity: 1;
-  }
-  
-  .ReactModal__Overlay--before-close{
+}
+
+.ReactModal__Overlay--before-close {
     opacity: 0;
-  }
+}
+
+html {
+    scroll-behavior: smooth;
+}
