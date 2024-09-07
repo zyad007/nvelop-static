@@ -37,25 +37,25 @@ const NavBar = () => {
                 <ul className="flex justify-center flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white ">
 
                     <li>
-                        <button className={' hover:text-[#9795A0] px-[22px] py-[12px] transition-all ' + (true ? ' font-semibold bg-[#0656FE] rounded-lg text-white' : '')}>
-                            <a href={'./test/product'} className=''>Product</a>
+                        <button className={' hover:text-[#9795A0] px-[22px] py-[12px] transition-all w-full' + (currentRoute.includes('./product') ? ' font-semibold bg-[#0656FE] rounded-lg text-white' : '')}>
+                            <a href={'./product'} className=''>Product</a>
                         </button>
                     </li>
 
                     <li>
-                        <button className={' hover:text-[#9795A0] px-[22px] py-[12px] transition-all ' + (currentRoute.includes('./#how-it-works-content') ? ' font-semibold bg-[#0656FE] rounded-lg text-white' : '')}>
-                            <a href={'./#how-it-works-content'} className=''>Benefits</a>
+                        <button className={' hover:text-[#9795A0] px-[22px] py-[12px] transition-all w-full' + (currentRoute.includes('./#how-it-works-content') ? ' font-semibold bg-[#0656FE] rounded-lg text-white' : '')}>
+                            <a href={'./#why-nvelop'} className=''>Benefits</a>
                         </button>
                     </li>
 
                     <li>
-                        <button className={' hover:text-[#9795A0] px-[22px] py-[12px] transition-all ' + (currentRoute.includes('./blogs') ? ' font-semibold bg-[#0656FE] rounded-lg text-white' : '')}>
+                        <button className={' hover:text-[#9795A0] px-[22px] py-[12px] transition-all w-full' + (currentRoute.includes('./blogs') ? ' font-semibold bg-[#0656FE] rounded-lg text-white' : '')}>
                             <a href={'./blogs'} className=''>Blog</a>
                         </button>
                     </li>
 
                     <li>
-                        <button className={' hover:text-[#9795A0] px-[22px] py-[12px] transition-all ' + (currentRoute.includes('./careers') ? ' font-semibold bg-[#0656FE] rounded-lg text-white' : '')}>
+                        <button className={' hover:text-[#9795A0] px-[22px] py-[12px] transition-all w-full' + (currentRoute.includes('./careers') ? ' font-semibold bg-[#0656FE] rounded-lg text-white' : '')}>
                             <a href={'./careers'} className=''>Careers</a>
                         </button>
                     </li>
