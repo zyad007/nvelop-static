@@ -91,7 +91,7 @@ export default function Home() {
           </div>
 
           <div className='w-full text-[#0656FE] text-center text-2xl md:text-5xl mt-16 mb-5 '>
-            <h2 className='pb-5'>Enchanced security & compliance from day one</h2>
+            <h2 className='pb-5'>Enchanced security & compliance from day one </h2>
           </div>
 
           <img className="w-full md:w-[25rem]" src="./flat/sfmikko-icon-10.svg" />
