@@ -20,8 +20,8 @@ const NavBar = () => {
     return (
         <div className={'flex flex-wrap items-center justify-between mx-auto w-full'}>
 
-            <a href='./'>
-                <img src='./Logos/logo.png' className='w-[180px]' />
+            <a href='/'>
+                <img src='/Logos/logo.png' className='w-[180px]' />
             </a>
 
             <button
