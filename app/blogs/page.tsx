@@ -81,7 +81,7 @@ export default async function Blogs() {
 
 
                             <div className="w-full flex flex-col justify-center items-center md:items-end">
-                                <a href="./blogs/1" className="mr-3.5 md:mr-0 buttonMain w-full md:w-[20rem] my-8 h-12 flex justify-center items-center">Read More</a>
+                                <a href="/blog-1" className="mr-3.5 md:mr-0 buttonMain w-full md:w-[20rem] my-8 h-12 flex justify-center items-center">Read More</a>
                             </div>
                         </div>
 
@@ -130,7 +130,7 @@ async function BlogPost({
                 </p>
 
                 <div className="w-full flex flex-col justify-center items-center md:items-end">
-                    <a href={`./blogs/${id}`} className="mr-3.5 md:mr-0 buttonMain w-full md:w-[20rem] my-8 h-12 flex justify-center items-center">Read More</a>
+                    <a href={`./blog-${id}`} className="mr-3.5 md:mr-0 buttonMain w-full md:w-[20rem] my-8 h-12 flex justify-center items-center">Read More</a>
                 </div>
             </div>
 
