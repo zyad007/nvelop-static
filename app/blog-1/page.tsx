@@ -1,6 +1,5 @@
 import { Be_Vietnam_Pro } from 'next/font/google';
 import React from 'react';
-import async from '../../careers/page';
 import { useRouter } from 'next/navigation';
 import AboutUs from '@/components/AboutUs';
 import Footer from '@/components/Footer';
