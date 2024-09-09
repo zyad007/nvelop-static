@@ -379,7 +379,7 @@ async function FounderCard({
   imagePath: string
 }) {
   return (
-    <div className="relative w-full lg:w-1/3 h-full xl:h-[30rem] flex flex-col justify-start items-center px-4 lg:px-8 mb-16 ">
+    <div className="relative w-full lg:w-1/3 h-full  flex flex-col justify-start items-center px-4 lg:px-8 mb-16 ">
       <img className="w-[10rem] mb-4 shadow rounded-full" src={imagePath} />
       <h3 className="text-4xl text-center mb-2">{name}</h3>
       <h4 className="text-2xl mb-4">{title}</h4>
