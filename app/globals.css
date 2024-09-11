@@ -4,9 +4,9 @@
 
 @layer components {
     .buttonMain {
-        @apply px-4 py-2 rounded border border-[#0656FE] bg-white text-[#0656FE] text-sm hover:shadow-[4px_4px_0px_0px_rgba(6,86,254)] transition duration-200
+        @apply px-4 py-2 rounded border border-[#0656FE] bg-white text-[#0656FE] text-sm hover:shadow-custom transition duration-200
     }
-  }
+}
 
 @keyframes fadeInUp {
     from {
@@ -79,4 +79,51 @@
 
 html {
     scroll-behavior: smooth;
+}
+
+
+.editor-container {
+    height: 100vh;
+    /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    font-family: var(--be-vietnam-pro);
+}
+
+.froala-editor {
+    height: 100%;
+    /* Ensure the editor takes full height */
+}
+
+@layer base {
+
+    .editor-container ul,ol {
+        list-style: revert;
+    }
+
+    .editor-container h1 {
+        @apply text-4xl;
+    }
+
+    .editor-container  h2 {
+        @apply text-3xl;
+    }
+
+    .editor-container h3 {
+        @apply text-2xl
+    }
+
+    .editor-container h4 {
+        @apply text-xl
+    }
+
+    .editor-container a {
+        @apply text-blue-600 underline;
+    }
+
+
+
+    :root {
+        --radius: 0.5rem
+    }
 }
