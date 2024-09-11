@@ -1,12 +1,6 @@
 'use client'
-import React, { useEffect, useState } from 'react';
-
-import 'froala-editor/css/froala_editor.pkgd.min.css';
-import 'froala-editor/css/froala_style.min.css';
-import 'froala-editor/js/plugins.pkgd.min.js';
-
-import FroalaEditor from "react-froala-wysiwyg";
-import FroalaEditorView from "react-froala-wysiwyg/FroalaEditorView";
+import React, { useEffect, useRef, useState } from 'react';
+import { Editor } from '@tinymce/tinymce-react';
 
 import { Be_Vietnam_Pro } from 'next/font/google';
 
@@ -20,11 +14,12 @@ enum TabState {
     'EDIT', 'PREVIEW'
 }
 
-const Editor = () => {
+const EditorTiny = () => {
 
     const [title, setTitle] = useState('');
     const [content, setContent] = useState('');
 
+    const editorRef = useRef()
     const [selected, setSelected] = useState<TabState>(TabState.EDIT)
 
     useEffect(() => {
@@ -71,37 +66,30 @@ const Editor = () => {
                 selected === TabState.EDIT && (
                     <>
                         <div className={beVietnamPro600.className + ' w-full h-full pt-5  editor-container'}>
-                            <FroalaEditor
-
-                                tag="textarea"
-                                model={content}
-                                onModelChange={handleModelChange}
-                                config={{
-                                    imageUploadURL: '/upload_image',
-                                    height: '100%',
-                                    width: '100%',
-                                    autoResize: false,
-                                    quickInsertEnabled: false,
-
-                                    toolbarButtons: [
-                                        ['bold', 'italic', 'underline', 'strikeThrough', 'subscript', 'superscript'],
-                                        ['fontSize', 'textColor', 'backgroundColor'],
-                                        ['paragraphFormat', 'align', 'formatOL', 'formatUL', 'outdent', 'indent', 'quote'],
-                                        ['insertLink', 'insertImage', 'insertTable'],
-                                        ['emoticons', 'insertHR', 'selectAll', 'clearFormatting'],
-                                        ['undo', 'redo']],
-                                    colorsText: ['#61BD6D', '#1ABC9C'],
-                                    fontFamily: {
-
-                                    }
+                            <Editor
+                                onInit={(_evt, editor) => (editorRef.current as any) = editor}
+                                apiKey='113fbiie64qvhb5p61tkwwngkmwjwc57m06t92m2yqbbuy8m'
+                                init={{
+                                    plugins: [
+                                        // Core editing features
+                                        'anchor', 'autolink', 'charmap', 'codesample', 'emoticons', 'image', 'link', 'lists', 'media', 'searchreplace', 'table', 'visualblocks', 'wordcount',
+                                    ],
+                                    toolbar: 'undo redo | blocks fontsize | bold italic underline strikethrough forecolor backcolor | link image media table mergetags | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
+                                    tinycomments_mode: 'embedded',
+                                    tinycomments_author: 'Author name',
+                                    mergetags_list: [
+                                        { value: 'First.Name', title: 'First Name' },
+                                        { value: 'Email', title: 'Email' },
+                                    ],
+                                    font_family_formats: 'var(--be-vietnam-pro)',
+                                    height: '100%'
                                 }}
+                                onEditorChange={(e) => {
+                                    setContent(e)
+                                }}
+                                value={content}
                             />
 
-                        </div>
-                        <div className='invisible'>
-                            <FroalaEditorView
-                                model={content}
-                            />
                         </div>
                     </>
                 )
@@ -109,14 +97,11 @@ const Editor = () => {
 
             {
                 selected === TabState.PREVIEW &&
-                <div className={beVietnamPro600.className + ' w-full h-full pt-5 min-h-[45rem] editor-container'}>
-                    <FroalaEditorView
-                        model={content}
-                    />
+                <div dangerouslySetInnerHTML={{ __html: content }} className={beVietnamPro600.className + ' w-full h-full pt-5 min-h-[45rem] editor-container px-10'}>
                 </div>
             }
         </div>
     );
 }
 
-export default Editor;
+export default EditorTiny;

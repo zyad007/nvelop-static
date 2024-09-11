@@ -1,6 +1,7 @@
 'use client'
 import AboutUs from "@/components/AboutUs"
-const Editor = dynamic(() => import('@/components/Editor'), { ssr: false })
+const EditorFroala = dynamic(() => import('@/components/EditorFroala'), { ssr: false })
+const EditrorTiny = dynamic(() => import('@/components/EditorTiny'), { ssr: false })
 import Footer from "@/components/Footer"
 import dynamic from "next/dynamic"
 import { Be_Vietnam_Pro } from "next/font/google"
@@ -11,13 +12,13 @@ const beVietnamPro600 = Be_Vietnam_Pro({
 })
 
 
-export default async function CreateBlog() {
+export default function CreateBlog() {
 
 
     return (
         <div className="w-full h-full">
             
-            <Editor />
+            <EditrorTiny />
 
             <div className={beVietnamPro600.className}>
                 <AboutUs />
