@@ -1,3 +1,4 @@
+'use client'
 import AboutUs from "@/components/AboutUs"
 const Editor = dynamic(() => import('@/components/Editor'), { ssr: false })
 import Footer from "@/components/Footer"
