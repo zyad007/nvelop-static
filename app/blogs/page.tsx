@@ -87,7 +87,7 @@ export default async function Blogs() {
 
                     </div>
 
-                    <BlogPost 
+                    <BlogPost
                         title="Nvelop - The origin story"
                         description="Like many young people of our generation I was swept away in the IT Revolution in India. Was picked by Tata Consultancy Services(TCS) in 2004 and started working soon... "
                         id={2}

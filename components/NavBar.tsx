@@ -38,25 +38,25 @@ const NavBar = () => {
 
                     <li>
                         <button className={' hover:text-[#9795A0] px-[22px] py-[12px] transition-all w-full' + (currentRoute.includes('./product') ? ' font-semibold bg-[#0656FE] rounded-lg text-white' : '')}>
-                            <a href={'./product'} className=''>Product</a>
+                            <a href={'/product'} className=''>Product</a>
                         </button>
                     </li>
 
                     <li>
                         <button className={' hover:text-[#9795A0] px-[22px] py-[12px] transition-all w-full' + (currentRoute.includes('./#how-it-works-content') ? ' font-semibold bg-[#0656FE] rounded-lg text-white' : '')}>
-                            <a href={'./#why-nvelop'} className=''>Benefits</a>
+                            <a href={'/#why-nvelop'} className=''>Benefits</a>
                         </button>
                     </li>
 
                     <li>
                         <button className={' hover:text-[#9795A0] px-[22px] py-[12px] transition-all w-full' + (currentRoute.includes('./blogs') ? ' font-semibold bg-[#0656FE] rounded-lg text-white' : '')}>
-                            <a href={'./blogs'} className=''>Blog</a>
+                            <a href={'/blogs'} className=''>Blog</a>
                         </button>
                     </li>
 
                     <li>
                         <button className={' hover:text-[#9795A0] px-[22px] py-[12px] transition-all w-full' + (currentRoute.includes('./careers') ? ' font-semibold bg-[#0656FE] rounded-lg text-white' : '')}>
-                            <a href={'./careers'} className=''>Careers</a>
+                            <a href={'/careers'} className=''>Careers</a>
                         </button>
                     </li>
                 </ul>
